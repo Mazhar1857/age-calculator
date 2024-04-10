@@ -1,0 +1,203 @@
+.age-calculator {
+    width: min(800px, 90%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+
+    font-family: "Poppins", sans-serif;
+    border-radius: 1em 1em 10em 1em;
+    box-shadow: 10px 10px 30px rgba(92, 91, 91, 0.2);
+}
+
+.user-dob {
+    display: flex;
+
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+}
+
+.user-input label {
+    color: rgba(113, 113, 113, 1);
+}
+
+.user-input input {
+    width: 100%;
+    padding: 0.3em 0em 0.3em 0.6em;
+    border-radius: 6px;
+    border: none;
+    outline: 1px solid rgba(224, 224, 224, 1);
+}
+
+.user-input label.error,
+.user-input div.error {
+    color: red;
+}
+
+.user-input input.error {
+    outline: 1px solid red;
+}
+
+.user-input div.error {
+    font-style: italic;
+    color: rgba(228, 127, 140, 1);
+}
+
+
+.user-input input:focus,
+.user-input input:hover {
+    outline: 1px solid rgba(121, 103, 167, 1);
+    cursor: pointer;
+}
+
+.user-input input::placeholder {
+
+    color: rgba(137, 137, 137, 1);
+
+}
+
+.dob-submit-btn {
+    position: relative;
+    margin: 3.5em 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    hr {
+        width: 100%;
+        color: brown;
+        border-top: 1px solid rgba(236, 236, 236, 1);
+    }
+
+    button {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 1;
+        border-radius: 100vmax;
+        background-color: rgba(134, 77, 254, 1);
+        padding: 1.6em;
+        border: none;
+
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+.dob-submit-btn button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+@media (min-width:30em) {
+
+    .age-calculator {
+        padding: 3em;
+    }
+
+    .dob-submit-btn {
+        justify-content: flex-end;
+    }
+
+    .user-dob {
+        width: 73%;
+        gap: 2em;
+    }
+
+    .user-input label {
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+
+    .user-input div.error {
+        font-size: 0.75em;
+    }
+
+    .user-input input {
+        font-size: 2em;
+        font-weight: 800;
+    }
+
+    .user-input input::placeholder {
+        font-weight: 700;
+        font-size: 0.8em;
+
+    }
+
+    .user-age {
+        font-size: 4.5em;
+        font-weight: 1000;
+        line-height: 1.25;
+
+        .custom-dash {
+            color: rgba(133, 77, 253, 1);
+            margin-right: 5px;
+            font-style: italic;
+        }
+    }
+
+    .dob-submit-btn button {
+        width: 6.5em;
+    }
+}
+
+@media (max-width:30em) {
+
+    .age-calculator {
+        padding: 1.5em;
+    }
+
+    .dob-submit-btn {
+        justify-content: center;
+    }
+
+    .user-dob {
+        width: 100%;
+        gap: 1em;
+    }
+
+    .user-input label {
+        font-size: 0.8em;
+        letter-spacing: 1.5px;
+        font-weight: 600;
+    }
+
+    .user-input div.error {
+        font-size: 0.6em;
+    }
+
+    .user-input input {
+        font-size: 1.3em;
+        font-weight: 800;
+    }
+
+    .user-input input::placeholder {
+        font-weight: 700;
+        font-size: 0.8em;
+    }
+
+    .user-age {
+        font-size: 2.5em;
+        font-weight: 1000;
+        line-height: 1.25;
+
+        .custom-dash {
+            color: rgba(133, 77, 253, 1);
+            margin-right: 5px;
+            font-style: italic;
+        }
+    }
+
+    .dob-submit-btn button {
+        width: 5.5em;
+    }
+}
